@@ -48,7 +48,7 @@ const App = props => {
         <GridListTile key="Subheader" cols={2} style={{height: 'auto'}}> 
           <ListSubheader 
           className="card-header" 
-          component="div"> About {props.accounts.length} results <FilterList /></ListSubheader> 
+          component="div"> <p className="filter"><FilterList disabled /></p> <p className="text">FILTER</p> </ListSubheader> 
           </GridListTile>
          { cards() }
        </GridList>

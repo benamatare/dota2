@@ -9,7 +9,6 @@ import Profile from './tabs/profile.js';
 import Info from './tabs/info.js';
 
 
-
 class Page extends Component {
 
 // const Page = props => {
@@ -23,6 +22,7 @@ render() {
   return (
     <div className="page-parent" style={{ border: '22px solid purple' }}>
       <Profile />
+      <h1 style={{border: '10px solid yellow'}}> top 10 heroes? </h1>
       <Info />
   </div>
   )}
