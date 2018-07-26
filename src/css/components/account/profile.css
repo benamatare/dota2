@@ -1,0 +1,77 @@
+
+
+.profile-parent {
+	/* background-color: #151515; */
+	width: 700px;
+	height: 700px;
+}
+
+.image-parent {
+	height: 200px;
+	width: 300px;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+	/* Avatar Icon */
+	.profile-picture {
+		padding-top: 2.5%;
+		padding-left: 2.5%;
+	}
+	/* Rank Icon Parent Container */
+	.profile-rank-parent {
+		height: 50%;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+		/* Rank Icon */
+		.profile-rank-icon {
+			width: 30%;
+		}
+		/* Rank Stars */
+		.profile-rank-stars {
+			width: 30%;
+		}
+	/* Globe Icon */
+	.locale {
+		padding-left: 2.5%;
+	}
+	/* Info Icon */
+	.steam {
+		padding-left: 2.5%;
+	}
+.info-parent {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	background-color: lightgray;
+	/* width: 600px; */
+}
+	/* Account Name */
+	.profile-name {
+		text-align: center;
+		font-size: 3em;
+
+		/* padding: 2.5%; */
+	}
+	/* Rank Name */
+	.profile-rank-name {
+		font-size: 0.3em;
+
+	}
+	/* Win Rate text */
+	.profile-ratio-child {
+		font-size: 0.6em;
+		text-transform: uppercase;
+	}
+	/* Win Rate as 00.00% */
+	.profile-ratio {
+	
+		text-align: center;
+		font-size: 2em;
+	}
+	

@@ -88,7 +88,7 @@ class Search extends Component {
         </IconButton>
         </Paper>
     )
-}
+  }
 };
 
 Search.propTypes = {
