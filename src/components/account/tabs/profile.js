@@ -52,70 +52,42 @@ const rank_logic_name = (rank_tier) => {
 };
 
 // rendering some stuff to the page all starts here but since i cant see anything i had to put this here
-return (
-    <div className="profile-parent">
-
-        <div className="image-parent"> 
-          <img className="profile-picture" src={props.account.info.profile.avatarfull} alt="profile-img"/>
-          {rank_logic(props.account.info.rank_tier)}
-          <a href="" className="locale"> <Public /> </a>
-          <a href="" className="steam"> <Info /> </a>
-        </div>
-
-          <div className="info-parent">
-            <span className="profile-name"> 
-            {trim(props.account.info.profile.personaname)} 
-            <Divider />
-              {rank_logic_name(props.account.info.rank_tier)}
-            </span>
-
-            <span className="profile-ratio"> 
-            <span className="profile-ratio-child"> Win Rate </span>
-            <Divider />
-            {((props.account.ratio.win / (props.account.ratio.win + props.account.ratio.lose)) * 100).toFixed(2)}%
+  return (
+      <div className="profile-parent">
+          <div className="image-parent"> 
+            <img className="profile-picture" src={props.account.info.profile.avatarfull} alt="profile-img"/>
+            {rank_logic(props.account.info.rank_tier)}
+            <span className="profile-icons">
+              <a href="" className="locale"> <Public /> </a>
+              <a href="" className="steam"> <Info /> </a>
             </span>
           </div>
 
-    </div>
-        // 
+            <div className="info-parent">
+              <span className="profile-name"> 
+                <h1>{trim(props.account.info.profile.personaname)}</h1> 
+              </span>
+              
+              <span className="profile-data"> 
+                <span className="profile-ratio">
+                  < h5> WinRate </h5> 
+                    <Divider />
+                  <span className="profile-win-ratio-value"> 
+                  {((props.account.ratio.win / (props.account.ratio.win + props.account.ratio.lose)) * 100).toFixed(2)}% 
+                  </span>
+                </span>
 
-      //   <Paper
-      //   //  this loads display flex of steam url, name, and account id
-      //     className="info-parent"
-      //     style={{border: 'solid 5px red'}}
-      //     children={
-      //       <div>
-      //       <h1> name is =>  </h1>
-      //       <p> this person is from here => {props.account.info.profile.loccountrycode}</p>
-      //       <TimeAgo date={props.account.info.profile.last_login}/>
-      //       <p> account id is => {props.account.info.profile.account_id} </p>
-      //       </div>
-      //     }/>
+                <span className="profile-record">
+                 <h5> Record </h5> 
+                  <Divider />
+                 <span className="profile-ratio-record"> <mark className="grn">{props.account.ratio.win}</mark>-<mark className="red">{props.account.ratio.lose}</mark> </span>
+                </span>
 
-      //     <Paper
-      //       className="info-record"
-      //       style={{border: 'solid 5px gray'}}
-      //       children={
-      //         <span> {props.account.ratio.win} - {props.account.ratio.lose} - <br></br>
-      //            wins - losses - draws</span>
-      //       }/>
-      //     <Paper
-      //       className="info-ratio"
-      //       style={{border: 'solid 5px orange'}}
-      //       children={
-      //         <span>
-      //         W/R => 
-      //         
-      //           <ul>
-      //             <li>wins => {props.account.ratio.win}</li>
-      //             <li> lose => {props.account.ratio.lose}</li>
-      //             <li> totals => {props.account.ratio.win + props.account.ratio.lose}</li>
-      //           </ul>
-      //         </span>
-      //       }/>
-    // </div>
-)
-}
+              </span>
+            </div>
+      </div>
+);
+};
 
 const mapStateToProps = state => {
     return {

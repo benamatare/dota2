@@ -7,23 +7,34 @@ import { reset } from './../../actions/general/general.js'
 
 import Profile from './tabs/profile.js';
 import Info from './tabs/info.js';
+import Type from './tabs/type.js';
+
+import './../../css/components/account/page.css';
 
 
 class Page extends Component {
 
 // const Page = props => {
-  componentDidMount(){
-    console.log('shit')
-  // this.props.reset()
-  }
-
+  
 // when this moutns flush the count
 render() {
   return (
-    <div className="page-parent" style={{ border: '22px solid purple' }}>
-      <Profile />
-      <h1 style={{border: '10px solid yellow'}}> top 10 heroes? </h1>
-      <Info />
+  <div className="page-parent">
+    <div className="page-parent-top">
+      <Profile /> 
+      <Type />
+    </div>
+ 
+
+    <div> cycle tab component goes here, this renders the page at the bottom of the screen</div>
+    <div> <Info /></div>
+   
+    <div> maybe have counts thingy go here?</div>
+
+
+
+
+      
   </div>
   )}
 };

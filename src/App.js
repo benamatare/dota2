@@ -16,8 +16,6 @@ import GridListTile from '@material-ui/core/GridListTile';
 import ListSubheader from '@material-ui/core/ListSubheader';
 
 import './css/App.css';
-import IconButton from '../node_modules/@material-ui/core';
-import Icon from '@material-ui/core/Icon';
 
 import FilterList from '@material-ui/icons/FilterList'
 
@@ -48,8 +46,11 @@ const App = props => {
        <GridList cellHeight={90}> 
         <GridListTile key="Subheader" cols={2} style={{height: 'auto'}}> 
           <ListSubheader 
-          className="card-header" 
-          component="div"> <p className="filter"><FilterList disabled /></p> <p className="text">FILTER</p> </ListSubheader> 
+            className="card-header" 
+            component="div"> 
+              <p className="filter"> <FilterList disabled /> </p> 
+              <p className="text"> FILTER </p> 
+            </ListSubheader> 
           </GridListTile>
          { cards() }
        </GridList>
@@ -68,9 +69,7 @@ const App = props => {
   return(
     <div>
       <Header/>
-      
       { logic() }
-
     </div>
   );
 };

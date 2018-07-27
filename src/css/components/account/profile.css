@@ -1,11 +1,15 @@
-
-
+/* Parental Guardian */
 .profile-parent {
-	/* background-color: #151515; */
-	width: 700px;
-	height: 700px;
-}
+	background-color: #151515;
+	
+	width: 350px;
+	/* padding: 25px; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 
+}
+/* Profile Image, Rank Icon(s) & Steam and Location Icon */
 .image-parent {
 	height: 200px;
 	width: 300px;
@@ -13,65 +17,141 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+
+	justify-content: center;
 }
 	/* Avatar Icon */
 	.profile-picture {
-		padding-top: 2.5%;
-		padding-left: 2.5%;
+		margin: 0.5%;
+		padding-right: 15px;
 	}
 	/* Rank Icon Parent Container */
 	.profile-rank-parent {
-		height: 50%;
+		margin: 0.5%;
+		width: 100px;
+		height: 200px;
 
 		display: flex;
 		flex-direction: column;
 		flex-wrap: nowrap;
+
+		justify-content: flex-start;
 	}
 		/* Rank Icon */
 		.profile-rank-icon {
-			width: 30%;
+			width: auto;
+			height: 50%;
 		}
 		/* Rank Stars */
 		.profile-rank-stars {
-			width: 30%;
+			width: auto;
+			height: 50%;
 		}
-	/* Globe Icon */
-	.locale {
-		padding-left: 2.5%;
+	.profile-icons {
+		position: absolute;
+
+		margin-top: 65px;
+		margin-left: 195px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
-	/* Info Icon */
-	.steam {
-		padding-left: 2.5%;
-	}
+		/* Globe Icon */
+		.locale {
+			padding-bottom: 5%;
+			padding-left: 5%;
+		}
+		/* Info Icon */
+		.steam {
+			padding-bottom: 5%;
+			padding-left: 5%;
+		}
+
+/* Player Name, Win %, Record ### - ####   */
 .info-parent {
+	width: 100%;
+
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
 
-	background-color: lightgray;
-	/* width: 600px; */
 }
-	/* Account Name */
+	/* Profile Name */
 	.profile-name {
-		text-align: center;
-		font-size: 3em;
+		width: 100%;
+		margin: 2.5%;
+		
+	}
+	.profile-name h1 {
+		color: #ffffff;
+		margin: 0;
+		font-size: 2.8em;
+		font-weight: 500;
+	}
 
-		/* padding: 2.5%; */
-	}
-	/* Rank Name */
-	.profile-rank-name {
-		font-size: 0.3em;
+	/* Profile Ratio & Record */
+	.profile-data {
+		display: flex;
+		flex-direction: row;
+
+		justify-content: center;
+
+		width: 100%;
 
 	}
-	/* Win Rate text */
-	.profile-ratio-child {
-		font-size: 0.6em;
-		text-transform: uppercase;
-	}
-	/* Win Rate as 00.00% */
+
+	/* Winrate */
 	.profile-ratio {
-	
-		text-align: center;
-		font-size: 2em;
+		width: 50%;
+		margin: 1.5%;
 	}
+		.profile-ratio  h5 {
+			margin: 0;
+
+			color: #828282;
+			font-size: 0.8em;
+			text-transform: uppercase;
+	
+		}
+		.profile-win-ratio-value {
+			font-size: 1.7em;
+			font-weight: 525;
+			color: #828282;
+			text-transform: uppercase;
+		}
+
+	.profile-record {
+		width: 50%;
+		margin: 1.5%;
+	}
+		.profile-record h5 {
+			margin: 0;
+
+			color: #828282;
+			font-size: 0.8em;
+			text-transform: uppercase;
+
+		}
+		.profile-ratio-record {
+			font-size: 1.7em;
+			font-weight: 525;
+			color: #828282;
+			text-transform: uppercase;
+		}
+.grn {
+	background: none;
+	color: green;
+}
+.red {
+	background: none;
+	color: red;
+}
+.MuiDivider-root-85 {
+	width: 50% !important;
+	height: 2px !important;
+	opacity: 0.5 !important;
+	background-color: #434343 !important;
+}
+	
 	

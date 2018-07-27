@@ -1,0 +1,17 @@
+.page-parent {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/* background-color: red; */
+}
+
+.page-parent-top {
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+
+	background-color: #151515;
+	border: 20px solid green;
+}

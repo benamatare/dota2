@@ -1,10 +1,9 @@
 
 /* Search Bar Parent */
 .MuiPaper-root-1.MuiPaper-elevation2-5 {
-	/* background-color: red !important; */
 	max-width: 640px;
+	max-height: 40px;
 
-	/* height: 29px; */
 
 	margin: 0 40px;
 	background-color: transparent;
